@@ -1,0 +1,51 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+nav.navbar{
+    height: 4rem;
+}
+div.form-container{
+    margin: auto;
+    padding: 4rem;
+    max-width: 33rem;
+}
+ul.gender-container{
+    list-style-type: none;
+    margin:25px 0 0 0;
+     padding:0;
+}
+.gender-container li{
+    float:left;
+    margin:0 5px 0 0;
+   width:100px;
+   height:40px;
+   position:relative;
+   
+}
+.gender-container label, .gender-container input{
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.gender-container input[type="radio"] {
+    opacity:0.011;
+    z-index:100;
+}
+.gender-container input[type="radio"]:checked + label {
+    background:dodgerblue;
+    color: white;
+}
+.gender-container label {
+    text-align: center;
+    padding:5px;
+    border:1px solid black; 
+    cursor:pointer;
+   z-index:90;
+}
+.btn-primary{
+    margin-top: 3rem;
+}
