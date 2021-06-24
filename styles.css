@@ -50,3 +50,39 @@ ul{
     margin-bottom: 4rem;
 }
 
+.input_hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+.selected {
+    background-color: #ccc;
+}
+#sites{
+    text-align: center;
+    padding: 5rem;
+}
+
+#sites label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+#sites label:hover {
+    background-color: dodgerblue;
+}
+
+#sites label img {
+    padding: 3px;
+    
+}
+input[type="radio"] {
+    opacity:0.011;
+    z-index:100;
+    cursor: pointer;
+}
+.active{
+    border: 1px solid black;
+}
+
