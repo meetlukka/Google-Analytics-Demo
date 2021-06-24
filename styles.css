@@ -85,4 +85,6 @@ input[type="radio"] {
 .active{
     border: 1px solid black;
 }
-
+#third-container{
+    text-align: center;
+}
