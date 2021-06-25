@@ -54,7 +54,7 @@ for(var i = 0;i<formElements.length-1;i++){
         var fieldName = htmlElement.getAttribute('fieldname')
         dataLayer.push({
             'event':'formFieldEvent',
-            'eventAction':'filling'
+            'eventAction':'filling',
             'eventLabel':fieldName
         })
     })
