@@ -26,3 +26,21 @@ submitBtn.addEventListener("click",function(){
     }
 
 })
+
+const imageElement = document.querySelectorAll(".radio-images")
+for(var i=0;i<imageElement.length;i++){
+    imageElement[i].addEventListener("click",function(e){
+        
+        const timeDiff = (Date.now()-performance.timing.domLoading)/1000
+        
+        if(e.target.classList.contains("radio-images")){
+            const itemName = e.target.getAttribute("customName")
+            dataLayer.push({
+                'event':'itemSelected',
+                'itemName':itemName,
+                'timeToClick':timeDiff
+            })
+            
+        }
+    })
+}
