@@ -68,7 +68,8 @@ for(var i=0;i<genderElement.length;i++){
         console.log(e.target)
         dataLayer.push({
             'event':'formFieldEvent',
-            'fieldName':'Gender'    
+            'eventLabel':'Gender',
+            'eventAction':'form filling'    
         })
     })
 }
