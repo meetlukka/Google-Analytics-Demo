@@ -1,6 +1,7 @@
 const mobile_list = document.getElementsByClassName("radio-images")
 const submitBtn = document.getElementsByClassName("btn-primary")[0]
 
+
 function clearAllChecked(){
     for(var i=0;i<mobile_list.length;i++){
         mobile_list[i].classList.remove("active")
