@@ -29,12 +29,18 @@ form.addEventListener("submit",(e)=>{
     if(messages.length>0){
     e.preventDefault();
     errorElement.innerText = messages.join(',');
+    
+    window.setTimeout(function () { 
+    document.getElementById("error").focus()
+}, 0); 
     }
 
     if(messages.length==0){
         // console.log("submitted form successully")
         dataLayer.push({
-            'event':'formSubmitSuccess'
+            'event':'formFieldEvent',
+            'eventAction':'submit',
+            'eventLabel':'form submit success'
         })
     }
 })
@@ -48,7 +54,8 @@ for(var i = 0;i<formElements.length-1;i++){
         var fieldName = htmlElement.getAttribute('fieldname')
         dataLayer.push({
             'event':'formFieldEvent',
-            'fieldName':fieldName
+            'eventAction':'filling'
+            'eventLabel':fieldName
         })
     })
 
