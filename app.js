@@ -31,3 +31,30 @@ form.addEventListener("submit",(e)=>{
     errorElement.innerText = messages.join(',');
     }
 })
+
+const formElements = document.querySelectorAll("input[required]")
+
+for(var i = 0;i<formElements.length-1;i++){
+    
+    formElements[i].addEventListener("focus",function(e){
+        var htmlElement = e.target;
+        var fieldName = htmlElement.getAttribute('fieldname')
+        dataLayer.push({
+            'event':'formFieldEvent',
+            'fieldName':fieldName
+        })
+    })
+
+}
+
+const genderElement = document.querySelectorAll("input[type=radio]")
+
+for(var i=0;i<genderElement.length;i++){
+    genderElement[i].addEventListener("click",function(e){
+        console.log(e.target)
+        dataLayer.push({
+            'event':'formFieldEvent',
+            'fieldName':'Gender'    
+        })
+    })
+}
