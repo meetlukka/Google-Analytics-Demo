@@ -30,6 +30,13 @@ form.addEventListener("submit",(e)=>{
     e.preventDefault();
     errorElement.innerText = messages.join(',');
     }
+
+    if(messages.length==0){
+        // console.log("submitted form successully")
+        dataLayer.push({
+            'event':'formSubmitSuccess'
+        })
+    }
 })
 
 const formElements = document.querySelectorAll("input[required]")
